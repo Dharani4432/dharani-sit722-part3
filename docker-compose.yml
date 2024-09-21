@@ -1,1 +1,16 @@
-# Your Solution
+version: '3.8'
+
+services:
+  book_catalog:
+    build: ./book_catalog
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://dharani722w7_user:RaOLEb1BZrCeFLgknSxKfKX8DeOERxWs@dpg-crnk5el6l47c73ahk390-a.oregon-postgres.render.com/dharani722w7
+
+  inventory_management:
+    build: ./inventory_management
+    ports:
+      - "8001:8001"
+    environment:
+      DATABASE_URL: postgresql://dharani722w7_user:RaOLEb1BZrCeFLgknSxKfKX8DeOERxWs@dpg-crnk5el6l47c73ahk390-a.oregon-postgres.render.com/dharani722w7
